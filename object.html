@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Object</title>
+  </head>
+  <body>
+    <div id="contoh"></div>
+    <script>
+      var mahasiswa = [
+        {'Nama' : 'Siti', 'NIM' : '10118355', 'Fakultas' : 'Teknik dan Ilmu Komputer'},
+        {'Nama' : 'Vania', 'NIM' : '10118356', 'Fakultas' : 'Teknik dan Ilmu Komputer'}
+      ];
+      var isi = ''
+      for(var i = 0;i<mahasiswa.length;i++){
+        isi = '${mahasiswa} Nama = ${mahasiswa[i].Nama}, Jurusan = ${mahasiswa} NIM = ${mahasiswa[i].NIM}, Fakultas = ${mahasiswa} ${mahasiswa[i].Fakultas}</br>';
+      }
+      document.getElementById("contoh").innerHTML = isi;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scope</title>
+  </head>
+  <body>
+    <div id="coba"></div>
+    <button onclick="local()">tekan</button>
+    <div id="coba2"></div>
+    <script>
+      let a = "hello"; // Mendeklarasikan sebuah variable global
+      document.getElementById("coba").innerHTML=typeof a +" "+ a;
+      function lokal(){
+          var b = "word" //mendeklarasikan variable lokal dalam sebuah fungsi
+          document.getElementById("coba").innerHTML=typeof a+ " "+a+" "+b; // variable global dapat dipanggil kapan saja termasuk didalam sebuag fungsi.
+      }
+      document.getElementById("coba2").innerHTML=typeof b ; // variable lokal tidak dapat dipanggil di luar fungsi dideklarasikannya variable
+    </script>
+  </body>
+</html>

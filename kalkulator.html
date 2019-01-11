@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator</title>
+    <style>
+    *{margin: 0;
+    padding: 0;}
+    .button {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      margin: 2px;
+      cursor: pointer;
+      background: #ffd700;
+      color:#fff;
+      border:0
+    }
+    .input{
+      width: 206px;
+      padding: 10px 5px;
+      margin: 5px;
+      border: none;
+      font-size: 22px;}
+    .main{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background: linear-gradient(to right,#ffa07a, #ffffe0)
+    }
+    .bg{
+      background: linear-gradient(to right,#ff8c00, #8fbc8f);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="main">
+      <form name="kalkulator">
+        <input class="input" name="kalkulator"/>
+        </form>
+        <table>
+          <tr>
+            <td><button class="button" value="ac" onclick="clean()"/>AC</td>
+            <td><button class="button" value="<-" onclick="hapus()"/><-</td>
+            <td><button class="button" value="+/-" onclick="isi('+/-')"/>+/-</td>
+            <td><button class="button" value="/" onclick="isi('/')"/>/</td>
+          </tr>
+          <tr>
+            <td><button class="button" value="tujuh" onclick="isi(7)"/>7</td>
+            <td><button class="button" value="delapan" onclick="isi(8)"/>8</td>
+            <td><button class="button" value="sembilan" onclick="isi(9)"/>9</td>
+            <td><button class="button" value="x" onclick="isi('*')"/>X</td>
+          </tr>
+          <tr>
+            <td><button class="button" value="empat" onclick="isi(4)"/>4</td>
+            <td><button class="button" value="lima" onclick="isi(5)"/>5</td>
+            <td><button class="button" value="enam" onclick="isi(6)"/>6</td>
+            <td><button class="button" value="kurang" onclick="isi('-')"/>-</td>
+          </tr>
+          <tr>
+            <td><button class="button" value="satu" onclick="isi(1)"/>1</td>
+            <td><button class="button" value="dua" onclick="isi(2)"/>2</td>
+            <td><button class="button" value="tiga" onclick="isi(3)"/>3</td>
+            <td><button class="button" value="tambah" onclick="isi('+')"/>+</td>
+          </tr>
+          <tr>
+            <td><button class="button" value="persen" onclick="isi('%')"/>%</td>
+            <td><button class="button" value="nol" onclick="isi('0')"/>0</td>
+            <td><button class="button" value="titik" onclick="isi('.')"/>.</td>
+            <td><button class="button" value="=" onclick="samadengan()"/>=</td>
+          </tr>
+        </table>
+        </div>
+        <script>
+          function isi(num){
+            document.kalkulator.kalkulator.value = document.kalkulator.kalkulator.value+num;
+          }
+          function clean(){
+            document.kalkulator.kalkulator.value = "";
+          }
+          function hapus(){
+            var hapus = document.kalkulator.kalkulator.value ="";
+            document.kalkulator.kalkulator.value = hapus,substring(0,hapus.length-1);
+          }
+          function samadengan(){
+            var sama_dengan = document.kalkulator.kalkulator.value;
+            if(sama_dengan){
+              document.kalkulator.kalkulator.value=eval(sama_dengan)
+            }
+          }
+        </script>
+  </body>
+</html>

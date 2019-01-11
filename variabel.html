@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Variabel di JavaScript</title>
+</head>
+<body>
+    <div id="coba"></div>
+<script>
+    var a = "selamat"; //var : pendeklarasian variabel yang dapat diubah (reassign) isinya, bersifat function-scopperd
+    let b = "pagi"; //let : mirip dengan var nilainnya dapat diubah kembali (reassign), namun bersifat block-scopperd
+    const c = "dunia" // const : hampir mirip dengan let bersifat block-scopped, bedanya coast nilainya tidak dapat diubah
+    document.getElementById("coba").innerHTML="Kata 1 = " + a + "</br> kata 2 = " + b + "</br> kata 3 = " + c +"</br>"+ a + "" + b + c;
+</script>
+</body>
+</html>
